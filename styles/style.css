@@ -7,7 +7,6 @@
     padding: 92px 24px 90px 24px;
     font-size: 18px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -22,21 +21,22 @@
     justify-content: space-between;
     margin-right: 15px;
     list-style: circle;
-
 }
 
-.header__links-list-item{
-
+.header__link{
+    text-underline-position: under;
 }
 
-/* посмотреть лоты */
-.header__links-list-lots{
-    
-}
-
-.header__links-list-item_no-bullit{
+.menu__links-list-item_no-bullit {
     list-style: none;
+}
+
+.menu__link_active {
     text-decoration-line: none;
+}
+
+.header__links-list-lots {
+    border-bottom-style: 40px;
 }
 
 /* хэдер логотип */
@@ -48,27 +48,34 @@
 
 /* инфа о компании */
 .header__address{
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     padding-left: 18px;
+}
+
+.address__text{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
     line-height: 24.3px;
     font-size: 18px;
-    text-decoration-line: none;
-
-    
-
+    text-underline-position: under;
 }
 
-.address{
-    font-style: normal;
-}
+/*.main{
+}*/
 
-.main{
-    height: 757px;
-    min-width: 1100px;
+.cover {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-
+    z-index: 0;
+    height: 757px;
+    width: 1100px;
+    background-image: url(/images/cover.jpg); 
+    background-size: auto 757px;
+    background-repeat: no-repeat;
+    background-position: center;
+    inset: 0;
 }
 
 /* оверлей */
@@ -78,19 +85,6 @@
     height: 100%;
     width: 100%;
     background-color: rgb(0, 0, 0, 0.6);
-}
-
-.cover {
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 0;
-    height: 757px;
-    width: 1100px;
-    background-image: url(/images/cover.jpg); 
-    background-size: auto 757px;
-    background-repeat: no-repeat;
-    background-position: center;
-    inset: 0;
 }
 
     /* контейнер оно тебе надо */
@@ -178,7 +172,6 @@
 /* блок с заголовком, тремя карточками и ссылкой*/
 .lots{
     padding: 179px 24px 184px 24px;
-    height: 692;
 }
 
 /*заголовок блока с карточками*/
@@ -192,12 +185,13 @@
 
 /*блок со списком*/
 .lots__card-list{
-    position: relative;
     list-style: none;
     padding-top: 27px;
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 /*пункт списка карточки
@@ -216,11 +210,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
     height: 100%;
     width: 100%;
     position: relative;
-
 }
 
 /*заголовки карточек*/
@@ -232,7 +224,6 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
-/* or 26px */
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -247,7 +238,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-    /* or 24px */
     color: #FFFFFF;
 }
 
@@ -279,11 +269,8 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-    text-decoration: none;
-    border-bottom: 1px solid #000000;
+    text-underline-position: under;
     padding-left: 40px;
-
-
 }
 
 .about {
@@ -293,8 +280,8 @@
     gap: 25px;
 }
 
-    /* logo-column */
-.about__column{
+/* logo-column */
+.about__column {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,7 +290,6 @@
     height: 240px;
     border-radius: 50%;
     margin-left: 47px;
-    
 }
 
 /*сам логотип*/
@@ -316,29 +302,68 @@
 .about__title {
     display: flex;
     padding-top: 100px;
+    padding-bottom: 100px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
-    padding-bottom: 76px;
 }
 
 /* текст */
-.about__text{
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-padding-top: 24px;
-
-}
-
 .about__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+.about__text-container{
     display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
+/*футер*/
 .footer {
-    
+    padding: 183px 50px 88px 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
+/*левая колонка*/
+.footer__address {
+    width: 13.5em;
+    flex: none;
+    text-wrap: wrap;
+}
+
+/*середина*/
+.footer__menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/*правая с иконками*/
+.footer__social-list{
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.footer__social-list-item{
+    list-style: none;
+}
+
+.footer__social-link{
+    display: block;
+}
+
+.footer__social-icon{
+    width: 48px;
+}
 
 /*
 
