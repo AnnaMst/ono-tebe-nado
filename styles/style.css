@@ -312,7 +312,7 @@
 
 /*футер*/
 .footer {
-    padding: 0px 50px 88px 50px;
+    padding: 0px 50px 88px;
     display: flex;
     justify-content: space-between;
 }
