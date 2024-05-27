@@ -4,7 +4,7 @@
     grid-template-columns: 4fr 1fr 1fr 3fr;
     justify-items: center;
     align-items: center;
-    padding: 92px 24px 91px 24px;
+    padding: 92px 24px 96px 24px;
     font-size: 18px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -36,7 +36,12 @@
 
 /* хэдер логотип */
 .header__logo {
-    width: 136px;
+    display: block;
+    width: 137px;
+}
+
+.header__logo-image {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)0 );
 }
 
 /* инфа о компании */
