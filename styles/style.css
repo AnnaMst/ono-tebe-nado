@@ -180,7 +180,7 @@
 
 /*пункт списка карточки*/
 
-.lots__card-list-item{
+.lots__card-list-item {
     flex-basis: 334px;
     flex-grow: 1;
 }
