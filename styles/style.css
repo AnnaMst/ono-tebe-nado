@@ -1,13 +1,12 @@
 /* место для вашего кода */
 .header {
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr 3fr;
+    grid-template-columns: 4fr 1fr 3.45fr 0.55fr;
     justify-items: center;
     align-items: center;
     padding: 94px 24px 0px 24px;
     margin-bottom: 96px;
     font-size: 18px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* навигация */
@@ -31,19 +30,11 @@
     text-decoration-line: none;
 }
 
-.header__links-list-lots {
-    border-bottom-style: 40px;
-}
-
 /* хэдер логотип */
 .header__logo {
     display: block;
     width: 137px;
     height: 105px;
-}
-
-.header__logo-image {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25) );
 }
 
 /* инфа о компании */
@@ -52,6 +43,7 @@
 }
 
 .address__text {
+    justify-self: end;
     display: flex;
     flex-direction: column;
     font-style: normal;
@@ -148,6 +140,7 @@
     padding: 12px 32px;
     display: flex;
     text-wrap: nowrap;
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 22px;
     line-height: 25.83px;
@@ -182,17 +175,21 @@
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
-/*пункт списка карточки
+/*пункт списка карточки*/
 
-.lots__card-list-item{}*/
+.lots__card-list-item{
+    flex-basis: 334px;
+    flex-grow: 1;
+}
 
 /*ссылка карточки*/
 .card-link {
     display: block;
     height: 100%;
-    width: 334px;
+
 }
 
 /*карточка*/
@@ -231,21 +228,18 @@
 /*картинки в карточках*/
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: auto 563px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: auto 563px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: auto 563px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -256,7 +250,6 @@
     line-height: 23px;
     text-underline-position: under;
     padding-left: 40px;
-    margin-bottom: ;
 }
 
 .about {
@@ -271,11 +264,14 @@
 
 /* logo-column */
 .about__column {
+    grid-row-start: 1;
+    grid-row-end: 3;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000000;
     border-radius: 50%;
+    margin-bottom: 320px;
 }
 
 /*сам логотип*/
@@ -298,7 +294,6 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: ;
 }
 
 .about__text {
