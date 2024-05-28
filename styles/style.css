@@ -131,7 +131,7 @@
     font-weight: 400;
     font-size: 22px;
     text-transform: uppercase;
-    line-height:calc(28 / 22 * 100%);
+    line-height: calc(28 / 22 * 100%);
     word-spacing: 0.84em ;
 }
 
@@ -301,8 +301,6 @@
     font-size: 20px;
     line-height: 24px;
 }
-
-
 
 /*футер*/
 .footer {
